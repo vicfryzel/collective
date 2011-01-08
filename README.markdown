@@ -1,6 +1,7 @@
-collective: blog engine with minimal core feature set
+# collective: blog engine with minimal core feature set
 
 Written by [Vic Fryzel](http://www.vicfryzel.com/)
+
 
 # Introduction and features
 
@@ -225,7 +226,7 @@ information on this topic, see my
 
 # Where did the name _collective_ come from?
 
-At first, I had wanted to name this blog engine 'picard', as a tribute to
+At first, I had wanted to name this blog engine _picard_, as a tribute to
 [Patrick Stewart](http://en.wikipedia.org/wiki/Patrick_Stewart) as
 [Jean-Luc Picard](http://en.wikipedia.org/wiki/Jean-Luc_Picard).  However,
 there are already some existing applications/libraries named picard, and I
