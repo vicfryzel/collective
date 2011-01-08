@@ -1,4 +1,5 @@
 collective: blog engine with minimal core feature set
+
 Written by [Vic Fryzel](http://www.vicfryzel.com/)
 
 # Introduction and features
@@ -228,7 +229,7 @@ At first, I had wanted to name this blog engine 'picard', as a tribute to
 [Patrick Stewart](http://en.wikipedia.org/wiki/Patrick_Stewart) as
 [Jean-Luc Picard](http://en.wikipedia.org/wiki/Jean-Luc_Picard).  However,
 there are already some existing applications/libraries named picard, and I
-didn't want to polute the open-source namespace.  collective works well
+didn't want to pollute the open-source namespace.  collective works well
 because just as Jean-Luc was assimilated by the Borg, he is forever part of
 the collective.  That's right, a little piece of Jean-Luc/Locutus is in this
 blog engine.
