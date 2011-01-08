@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for article in articles.object_list %}
+  {% include "articles/article.html" %}
+{% endfor %}
+<article>
+  <section>
+    <div class="pagination">
+      <span class="newer-posts">
+      {% if articles.has_previous %}
+        <a href="/{{ articles.previous_page_number }}">Newer Posts</a>
+      {% endif %}
+      </span>
+
+      <span class="older-posts">
+      {% if articles.has_next %}
+        <a href="/{{ articles.next_page_number }}">Older Posts</a>
+      {% endif %}
+      </span>
+    </div>
+  </section>
+</article>
+{% endblock %}

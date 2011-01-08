@@ -1,0 +1,29 @@
+from collective.articles.models import Article
+from django.contrib.syndication.views import Feed
+from django.utils.feedgenerator import Atom1Feed
+import markdown
+
+class RssArticlesFeed(Feed):
+  title = 'My Blog Articles' # EDIT_ME
+  description = 'My thoughts in digital form.' # EDIT_ME
+  author_name = 'Your Name' # EDIT_ME
+  author_link = 'http://www.mydomain.com' # EDIT_ME
+  item_author_name = 'Your Name' # EDIT_ME
+  feed_copyright = 'Copyright Your Name.  All rights reserved.' # EDIT_ME
+  item_author_link = 'http://www.mydomain.com' # EDIT_ME
+  
+  link = "/"
+
+  def items(self):
+    return Article.objects.order_by('-pub_date')[:5]
+
+  def item_description(self, item):
+    return markdown.markdown(item.body)
+
+  def item_pubdate(self, item):
+    return item.pub_date
+
+
+class AtomArticlesFeed(RssArticlesFeed):
+  feed_type = Atom1Feed
+  subtitle = RssArticlesFeed.description

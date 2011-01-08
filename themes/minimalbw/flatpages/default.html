@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block content %}
+<article>
+<section>
+{{ flatpage.content|markdown:"codehilite" }}
+</section>
+</article>
+{% endblock %}

@@ -1,0 +1,6 @@
+*.pyc
+*.swp
+settings.py
+feeds.py
+themes/minimalbw-*
+contrib/passenger_wsgi.py

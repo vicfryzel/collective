@@ -1,0 +1,13 @@
+{% load markup %}
+
+<article>
+  <header>
+    <h1><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h1>
+    <p>
+      <time pubdate="pubdate" datetime="{{ article.pub_date|date:"c" }}">{{ article.pub_date }}</time>
+      <a href="{{ article.get_absolute_url }}#disqus_thread">Comments</a>
+    </p>
+  </header>
+  <section>{{ article.body|markdown:"codehilite" }}</section>
+  {% block comments %}{% endblock %}
+</article>

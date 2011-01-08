@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Archives{% endblock %}
+{% block content %}
+<article>
+  <header>
+    <h1><a href="{% url articles.views.archives %}">Archives</a></h1>
+  </header>
+  <section>
+    <header>
+      <h2>{{ articles.0.pub_date|date:"F Y" }}</h2>
+    </header>
+    <ul>
+    {% for article in articles %}
+      {% ifchanged article.pub_date.year article.pub_date.month %}
+      {% if not forloop.first %}
+          </ul>
+        </section>
+        <section>
+        <header><h2>{{ article.pub_date|date:"F Y" }}</h2></header>
+        <ul>
+      {% endif %}
+      {% endifchanged %}
+      <li>
+        <p>
+        <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+        </p>
+        <p>
+        {{ article.pub_date }},
+        <a href="{{ article.get_absolute_url }}#disqus_thread">Comments</a>
+        </p>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+</article>
+{% endblock %}

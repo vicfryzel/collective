@@ -1,0 +1,12 @@
+import sys, os
+import django.core.handlers.wsgi
+sys.path.insert(0, '/path/to/dir/containing/collective') # EDIT_ME
+sys.path.append('/path/to/collective') # EDIT_ME
+# If in a shared hosting environment, you will have to install dependencies
+# yourself, so find the relevant egg files after installing with easy_install
+# and put their paths here.
+sys.path.append('/path/to/Markdown-2.0.3-py2.5.egg') # EDIT_ME
+sys.path.append('/path/to/Pygments-1.4-py2.5.egg') # EDIT_ME
+sys.path.append(os.getcwd())
+os.environ['DJANGO_SETTINGS_MODULE'] = 'collective.settings'
+application = django.core.handlers.wsgi.WSGIHandler()
