@@ -218,6 +218,10 @@ footer > .column:last-of-type {
   padding-right: 0;
 }
 
+footer > .column:last-of-type p {
+  margin-bottom: 5%;
+}
+
 footer img {
   border: 2px solid #ccc;
   margin: 0;
@@ -231,14 +235,6 @@ nav, .nav{
 .legal {
   text-align: justify;
 }
-
-.legal:first-of-type {
-  margin-top: 5%;
-}
-
-
-
-
 
 
 @media all and (orientation:portrait) { 
